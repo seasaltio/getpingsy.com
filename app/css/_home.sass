@@ -1,0 +1,96 @@
+.home-wrapper
+  background-color: #F7518C
+  color: white
+
+.home
+  padding: 2em 0
+
+  +tablet
+    padding: 4em 0
+
+  +desktop
+    padding: 5em 0
+
+.home-top
+  margin-bottom: 2em
+
+  +tablet-desktop
+    margin-bottom: 4em
+
+h1.home-header
+  text-align: center
+  text-transform: uppercase
+
+  +tablet-desktop
+    font-size: 3.5em
+    margin-bottom: 1.5rem
+
+h1.home-header span
+  display: inline
+  border-bottom: 3px solid white
+
+p.home-desc
+  text-align: center
+
+  +tablet-desktop
+    font-size: 2em
+    margin-bottom: 0rem
+
+.home-images
+  +push(1)
+  +span-columns(10)
+
+.home-image
+  text-align: center
+  margin-bottom: 2em
+
+  +tablet
+    margin-bottom: 0
+    +span-columns(5, 10)
+
+  +desktop
+    margin-bottom: 0
+    +span-columns(5, 10)
+
+.home-image:last-child
+  margin-bottom: 0
+  +tablet
+    +span-columns(5 omega, 10)
+  +desktop
+    +span-columns(5 omega, 10)
+
+.home-image img
+  max-width: 100%
+  display: inline
+
+.footer-wrapper
+
+.footer
+  text-align: center
+  padding: 2em 0
+
+  +tablet
+    padding: 4em 0
+
+
+a.footer-logo
+
+a.footer-logo img
+  max-width: 60px
+
+ul.footer-menu
+  list-style-type: none
+  margin: 0
+  padding: 0
+
+li.footer-menu
+  list-style-type: none
+  margin: 0
+  padding: 0
+  display: inline-block
+  padding: 0 2em
+
+a.footer-link
+
+
+

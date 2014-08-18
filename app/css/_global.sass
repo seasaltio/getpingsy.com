@@ -1,0 +1,65 @@
+body
+  position: relative
+  background-color: #fff
+  +font-reg
+
+////////////////////// TYPE
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li
+  margin-top: 0px // override normalize
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  text-transform: uppercase
+  +font-bold
+
+
+p
+  line-height: 1.5em
+
+a,
+a:link,
+a:visited
+  +single-transition(color, 0.05s, ease-in-out)
+  text-decoration: none
+  outline: none
+  color: #F7518C
+
+a:hover, a:focus
+  color: #B61F5F
+  text-decoration: underline
+
+strong
+  +font-bold
+
+em
+  +font-reg-it
+
+em strong,
+strong em
+  +font-bold-it
+
+
+iframe
+  border: none
+  display: block
+
+
+.clear
+  clear: both
+
+.container
+  +container
+  position: relative
