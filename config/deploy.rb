@@ -41,6 +41,7 @@ namespace :deploy do
   end
 
   task :config do
+    nginx.config
   end
 
   task :export do
@@ -48,5 +49,23 @@ namespace :deploy do
 
   task :cold do
     update_code
+  end
+end
+
+####
+
+namespace :nginx do
+  %w[start stop restart].each do |command|
+    desc "#{command} nginx"
+    task command, roles: :web do
+      run "sudo /etc/init.d/nginx #{command}"
+    end
+  end
+
+  task :config, roles: :web do
+    template "nginx.erb", "/tmp/nginx.conf"
+    run "#{sudo} mv /tmp/nginx.conf /etc/nginx/sites-enabled/#{application}.conf"
+    run "mkdir -p /home/#{user}/www; touch /home/#{user}/www/index.html"
+    nginx.restart
   end
 end
