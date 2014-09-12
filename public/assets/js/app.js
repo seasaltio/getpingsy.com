@@ -32,6 +32,9 @@
   });
 
   FA.Router.map(function() {
+    this.route("privacy", {
+      path: "privacy"
+    });
     return this.route("no_route", {
       path: "*path"
     });

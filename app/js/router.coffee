@@ -10,6 +10,7 @@ FA.Router.reopen
   ).on 'didTransition'
 
 FA.Router.map () ->
+  @route "privacy", path: "privacy"
   @route "no_route", path: "*path"
 
 ######

@@ -24,4 +24,12 @@
         %a.footer-link{ href: "https://twitter.com/getpingsy", title: "Pingsy on Twitter" }
           %span.icon-twitter
           Pingsy on Twitter
-
+      %li.footer-menu
+        %a.footer-link{ href: "mailto:support@getpingsy.com", title: "Pingsy Support" }
+          %span.icon-plus
+          Pingsy Support
+      %li.footer-menu
+        {{#link-to 'privacy' class="footer-link"}}
+        %span.icon-chevron-right
+          Privacy Policy
+        {{/link-to}}

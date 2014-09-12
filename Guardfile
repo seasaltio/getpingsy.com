@@ -5,6 +5,6 @@ end
 
 
 guard :haml, run_at_start: true, input: 'app/pages', output: 'public' do
-  watch %r{^app/pages/.+(\.hbs\.haml)}
+  watch %r{^app/pages/.+(\.html\.haml)}
 end
 
